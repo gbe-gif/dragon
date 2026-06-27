@@ -1,0 +1,8 @@
+{
+  "name": "Celestusia Empire Worldview",
+  "description": "An 18th century European romance fantasy RP worldview introduction page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

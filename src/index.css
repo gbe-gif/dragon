@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+KR:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #cda434;
+  --color-gold-dim: rgba(205, 164, 52, 0.3);
+  --color-bg-main: #121212;
+  --color-bg-card: #1a1a1a;
+  --color-text-main: #e0e0e0;
+  
+  --font-serif-en: 'Cormorant Garamond', serif;
+  --font-serif-kr: 'Noto Serif KR', serif;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-serif-kr);
+  line-height: 1.6;
+}
