@@ -240,6 +240,14 @@ const Seraphion = () => (
           ))}
         </div>
       </div>
+
+      <div className="mt-[40px]">
+        <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Childhood</h3>
+        <div className="flex flex-col gap-[15px]">
+          <img src="https://gbe88.uk/1/D/sr1.webp" alt="세라피온 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          <img src="https://gbe88.uk/1/D/sr2.webp" alt="세라피온 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+        </div>
+      </div>
     </div>
   </>
 );
@@ -322,6 +330,15 @@ const Fidelis = () => (
               className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" 
             />
           ))}
+        </div>
+      </div>
+
+      <div className="mt-[40px]">
+        <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Childhood</h3>
+        <div className="flex flex-col gap-[15px]">
+          <img src="https://gbe88.uk/1/D/fd1.webp" alt="피델리스 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          <img src="https://gbe88.uk/1/D/fd2.webp" alt="피델리스 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          <img src="https://gbe88.uk/1/D/fd3.webp" alt="피델리스 어린 시절 3" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
         </div>
       </div>
     </div>
