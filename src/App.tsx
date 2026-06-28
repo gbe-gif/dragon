@@ -226,6 +226,20 @@ const Seraphion = () => (
           <ListItem>세오로 성장 중, 용명 부작용으로 하얀 피부가 그을린 구릿빛으로 변함.</ListItem>
         </List>
       </Card>
+      
+      <div className="mt-[40px]">
+        <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Gallery</h3>
+        <div className="flex flex-col gap-[15px]">
+          {Array.from({ length: 11 }, (_, i) => (
+            <img 
+              key={i} 
+              src={`https://gbe88.uk/D/S_${i + 1}.webp`} 
+              alt={`세라피온 일러스트 ${i + 1}`} 
+              className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" 
+            />
+          ))}
+        </div>
+      </div>
     </div>
   </>
 );
@@ -296,6 +310,20 @@ const Fidelis = () => (
           <ListItem>공식적인 사교 모임을 피곤해하며, 오직 당신 앞에서만 완벽한 가면을 벗고 무방비하게 풀어짐.</ListItem>
         </List>
       </Card>
+
+      <div className="mt-[40px]">
+        <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Gallery</h3>
+        <div className="flex flex-col gap-[15px]">
+          {Array.from({ length: 11 }, (_, i) => (
+            <img 
+              key={i} 
+              src={`https://gbe88.uk/D/F_${i + 1}.webp`} 
+              alt={`피델리스 일러스트 ${i + 1}`} 
+              className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" 
+            />
+          ))}
+        </div>
+      </div>
     </div>
   </>
 );
@@ -390,7 +418,7 @@ const SupportingCharacters = () => (
 );
 
 export default function App() {
-  const [currentTab, setCurrentTab] = useState<'worldview' | 'seraphion' | 'fidelis' | 'supporting'>('seraphion');
+  const [currentTab, setCurrentTab] = useState<'worldview' | 'seraphion' | 'fidelis' | 'supporting'>('worldview');
 
   return (
     <div className="flex justify-center min-h-screen bg-bg-main text-text-main font-serif-kr">
