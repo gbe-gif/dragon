@@ -417,8 +417,62 @@ const SupportingCharacters = () => (
   </div>
 );
 
+const UnsafePage = ({ isUnlocked, onUnlock }: { isUnlocked: boolean, onUnlock: () => void }) => {
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'S04295F') {
+      onUnlock();
+      setError(false);
+    } else {
+      setError(true);
+    }
+  };
+
+  if (!isUnlocked) {
+    return (
+      <div className="pt-[100px] flex flex-col items-center justify-center text-text-main">
+        <span className="text-[3rem] mb-4 text-gold">🔒</span>
+        <h2 className="font-serif-kr text-[1.4rem] text-gold mb-2">언세이프 갤러리</h2>
+        <p className="text-[0.85rem] text-white/60 mb-[30px] text-center font-light">언세이프 상세정보에 적힌 비밀번호를 입력해주세요.</p>
+        
+        <form onSubmit={handleSubmit} className="w-full max-w-[280px] flex flex-col gap-4">
+          <input 
+            type="password" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="bg-[#1a1a1a] border border-gold-dim text-white text-center p-3 font-serif-en outline-none focus:border-gold transition-colors"
+            placeholder="PASSWORD"
+          />
+          {error && <p className="text-red-400 text-center text-[0.85rem] m-0">비밀번호가 일치하지 않습니다.</p>}
+          <button 
+            type="submit"
+            className="bg-gold/10 border border-gold text-gold py-3 font-serif-kr hover:bg-gold/20 transition-colors"
+          >
+            입력
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  return (
+    <div className="pt-[40px]">
+      <h1 className="font-serif-en text-gold text-center tracking-[2px] text-[1.8rem] mb-[5px]">Unsafe Gallery</h1>
+      <p className="text-center text-[0.9rem] text-text-main mt-0 mb-[30px] font-light">성인용 이미지 갤러리</p>
+      
+      <div className="flex flex-col gap-[15px] min-h-[300px] border border-gold-dim bg-[#1a1a1a] p-4 flex items-center justify-center text-white/50">
+        [언세이프 이미지 삽입 영역]
+      </div>
+    </div>
+  );
+};
+
 export default function App() {
-  const [currentTab, setCurrentTab] = useState<'worldview' | 'seraphion' | 'fidelis' | 'supporting'>('worldview');
+  const [currentTab, setCurrentTab] = useState<'worldview' | 'seraphion' | 'fidelis' | 'supporting' | 'unsafe'>('worldview');
+  const [isUnsafeUnlocked, setIsUnsafeUnlocked] = useState(false);
 
   return (
     <div className="flex justify-center min-h-screen bg-bg-main text-text-main font-serif-kr">
@@ -428,6 +482,7 @@ export default function App() {
           {currentTab === 'seraphion' && <Seraphion />}
           {currentTab === 'fidelis' && <Fidelis />}
           {currentTab === 'supporting' && <SupportingCharacters />}
+          {currentTab === 'unsafe' && <UnsafePage isUnlocked={isUnsafeUnlocked} onUnlock={() => setIsUnsafeUnlocked(true)} />}
         </div>
         
         {/* Bottom Padding */}
@@ -437,31 +492,38 @@ export default function App() {
         <div className="fixed bottom-0 w-full max-w-[540px] h-[60px] bg-bg-main border-t border-gold flex justify-around items-center z-[100] pb-[env(safe-area-inset-bottom)]">
           <button 
             onClick={() => setCurrentTab('worldview')} 
-            className={`${currentTab === 'worldview' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
+            className={`${currentTab === 'worldview' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.8rem] sm:text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
           >
             <span className="text-[1.2rem]">⚜</span>
             <span>세계관</span>
           </button>
           <button 
             onClick={() => setCurrentTab('seraphion')} 
-            className={`${currentTab === 'seraphion' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
+            className={`${currentTab === 'seraphion' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.8rem] sm:text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
           >
             <span className="text-[1.2rem]">♚</span>
             <span>세라피온</span>
           </button>
           <button 
             onClick={() => setCurrentTab('fidelis')} 
-            className={`${currentTab === 'fidelis' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
+            className={`${currentTab === 'fidelis' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.8rem] sm:text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
           >
             <span className="text-[1.2rem]">♔</span>
             <span>피델리스</span>
           </button>
           <button 
             onClick={() => setCurrentTab('supporting')} 
-            className={`${currentTab === 'supporting' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
+            className={`${currentTab === 'supporting' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.8rem] sm:text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
           >
             <span className="text-[1.2rem]">♙</span>
             <span>조연 소개</span>
+          </button>
+          <button 
+            onClick={() => setCurrentTab('unsafe')} 
+            className={`${currentTab === 'unsafe' ? 'text-gold font-semibold' : 'text-gold-dim'} hover:text-gold transition-colors duration-200 no-underline font-serif-kr text-[0.8rem] sm:text-[0.9rem] flex flex-col items-center gap-[4px] bg-transparent border-none cursor-pointer p-0 w-full h-full justify-center`}
+          >
+            <span className="text-[1.2rem]">🔒</span>
+            <span>언세이프</span>
           </button>
         </div>
       </div>
