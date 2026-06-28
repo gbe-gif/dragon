@@ -459,12 +459,36 @@ const UnsafePage = ({ isUnlocked, onUnlock }: { isUnlocked: boolean, onUnlock: (
   }
 
   return (
-    <div className="pt-[40px]">
+    <div className="pt-[40px] pb-[40px]">
       <h1 className="font-serif-en text-gold text-center tracking-[2px] text-[1.8rem] mb-[5px]">Unsafe Gallery</h1>
       <p className="text-center text-[0.9rem] text-text-main mt-0 mb-[30px] font-light">성인용 이미지 갤러리</p>
       
-      <div className="flex flex-col gap-[15px] min-h-[300px] border border-gold-dim bg-[#1a1a1a] p-4 flex items-center justify-center text-white/50">
-        [언세이프 이미지 삽입 영역]
+      <div className="mb-[40px]">
+        <h2 className="font-serif-kr text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">세라피온 (Seraphion)</h2>
+        <div className="flex flex-col gap-[15px]">
+          {Array.from({ length: 8 }, (_, i) => (
+            <img 
+              key={`S_${i + 12}`} 
+              src={`https://gbe88.uk/D/S_${i + 12}.webp`} 
+              alt={`세라피온 언세이프 ${i + 12}`} 
+              className="w-full h-auto object-contain border border-gold-dim bg-[#1a1a1a]" 
+            />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="font-serif-kr text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">피델리스 (Fidelis)</h2>
+        <div className="flex flex-col gap-[15px]">
+          {Array.from({ length: 8 }, (_, i) => (
+            <img 
+              key={`F_${i + 12}`} 
+              src={`https://gbe88.uk/D/F_${i + 12}.webp`} 
+              alt={`피델리스 언세이프 ${i + 12}`} 
+              className="w-full h-auto object-contain border border-gold-dim bg-[#1a1a1a]" 
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
