@@ -179,6 +179,7 @@ const Seraphion = () => (
       <Card>
         <List>
           <ListItem><Highlight>나이:</Highlight> 23세</ListItem>
+          <ListItem><Highlight>생일:</Highlight> 08.17</ListItem>
           <ListItem><Highlight>신분:</Highlight> 제국의 2황자이자, 이번 세대의 용명 적통 각성자임.</ListItem>
         </List>
         
@@ -270,6 +271,7 @@ const Fidelis = () => (
       <Card>
         <List>
           <ListItem><Highlight>나이:</Highlight> 22세</ListItem>
+          <ListItem><Highlight>생일:</Highlight> 02.19</ListItem>
           <ListItem><Highlight>신분:</Highlight> 세라피온을 대체하기 위해 입양된 황태자이자, 방계 출신의 용명 각성자임.</ListItem>
         </List>
         
