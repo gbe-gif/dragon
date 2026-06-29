@@ -244,9 +244,18 @@ const Seraphion = () => (
 
       <div className="mt-[40px]">
         <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Childhood</h3>
-        <div className="flex flex-col gap-[15px]">
-          <img src="https://gbe88.uk/1/D/sr1.webp" alt="세라피온 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
-          <img src="https://gbe88.uk/1/D/sr2.webp" alt="세라피온 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+        <div className="flex flex-col gap-[20px]">
+          <div>
+            <div className="text-center text-white/70 text-[0.95rem] mb-[8px] font-serif-kr tracking-wide">5살</div>
+            <img src="https://gbe88.uk/1/D/sr3.webp" alt="세라피온 어린 시절 3" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          </div>
+          <div>
+            <div className="text-center text-white/70 text-[0.95rem] mb-[8px] font-serif-kr tracking-wide">7~8살</div>
+            <div className="flex flex-col gap-[15px]">
+              <img src="https://gbe88.uk/1/D/sr1.webp" alt="세라피온 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+              <img src="https://gbe88.uk/1/D/sr2.webp" alt="세라피온 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -337,10 +346,19 @@ const Fidelis = () => (
 
       <div className="mt-[40px]">
         <h3 className="font-serif-en text-gold text-[1.4rem] border-b border-gold-dim pb-[8px] mb-4 text-center">Childhood</h3>
-        <div className="flex flex-col gap-[15px]">
-          <img src="https://gbe88.uk/1/D/fd1.webp" alt="피델리스 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
-          <img src="https://gbe88.uk/1/D/fd2.webp" alt="피델리스 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
-          <img src="https://gbe88.uk/1/D/fd3.webp" alt="피델리스 어린 시절 3" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+        <div className="flex flex-col gap-[20px]">
+          <div>
+            <div className="text-center text-white/70 text-[0.95rem] mb-[8px] font-serif-kr tracking-wide">7살</div>
+            <img src="https://gbe88.uk/1/D/fd1.webp" alt="피델리스 어린 시절 1" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          </div>
+          <div>
+            <div className="text-center text-white/70 text-[0.95rem] mb-[8px] font-serif-kr tracking-wide">10살쯤</div>
+            <img src="https://gbe88.uk/1/D/fd2.webp" alt="피델리스 어린 시절 2" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          </div>
+          <div>
+            <div className="text-center text-white/70 text-[0.95rem] mb-[8px] font-serif-kr tracking-wide">15살쯤</div>
+            <img src="https://gbe88.uk/1/D/fd3.webp" alt="피델리스 어린 시절 3" className="w-full h-auto aspect-[3/2] object-cover border border-gold-dim bg-[#1a1a1a]" />
+          </div>
         </div>
       </div>
     </div>
